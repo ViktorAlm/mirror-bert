@@ -6,10 +6,10 @@ Credit goes to: https://github.com/Kirill-Kravtsov
 
 import torch
 import torch.nn.functional as F
-from transformers import BertModel, RobertaModel, XLMRobertaModel
+from transformers import BertModel, RobertaModel, XLMRobertaModel, RemBertModel
 
 
-VALID_CLS = (BertModel, RobertaModel, XLMRobertaModel)
+VALID_CLS = (BertModel, RobertaModel, XLMRobertaModel, RemBertModel)
 
 
 def _drophead_hook(module, input, output):
