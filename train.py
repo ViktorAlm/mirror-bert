@@ -164,7 +164,7 @@ def main(args):
     )
 
     if args.parallel:
-        model.encoder = torch.nn.DataParallel(model.encoder)
+        model.encoder = torch.nn.DataParallel(model.encoder, device_ids=[0,1,2,3])
         LOGGER.info("using nn.DataParallel")
     
     def collate_fn_batch_encoding_pairwise(batch):
